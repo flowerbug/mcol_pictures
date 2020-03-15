@@ -165,7 +165,7 @@ done
 
 # print the version if asked and then exit
 if test "${version}" == "1" ; then
-  echo "$0 Version 1.0.1"
+  echo "$0 Version 1.0.2"
   exit
 fi
 
@@ -250,13 +250,13 @@ for coll_dir_name in ${list_coll} ; do
   else
     if test ${link_files} == "1" ; then 
       echo -e "\n  Linking collection ${coll_dir_name}...\n\n"
-      exiftool ${verb} -P ${PIC_INDEX} -fileOrder FileModifyDate -d ${PIC_INDEX}/%Y/%m/%d/${coll_dir_name}_%Y%m%d_%H%M%S%z '-HardLink<$FileModifyDate_$ShutterCount.%e' ${PIC_COLL}/${coll_dir_name}/*
+      exiftool ${verb} -P ${PIC_INDEX} -fileOrder FileModifyDate -d ${PIC_INDEX}/%Y/%m/%d/${coll_dir_name}_%Y%m%d_%H%M%S%z '-HardLink<${FileModifyDate}_${ShutterCount}.%e' ${PIC_COLL}/${coll_dir_name}/*
     elif test ${copy_files} == "1" ; then
       echo -e "\n  Copying collection ${coll_dir_name}...\n\n"
-      exiftool ${verb} -P -o ${PIC_INDEX} -fileOrder FileModifyDate -d ${PIC_INDEX}/%Y/%m/%d/${coll_dir_name}_%Y%m%d_%H%M%S%z '-FileName<$FileModifyDate_$ShutterCount.%e' ${PIC_COLL}/${coll_dir_name}/*
+      exiftool ${verb} -P -o ${PIC_INDEX} -fileOrder FileModifyDate -d ${PIC_INDEX}/%Y/%m/%d/${coll_dir_name}_%Y%m%d_%H%M%S%z '-FileName<${FileModifyDate}_${ShutterCount}.%e' ${PIC_COLL}/${coll_dir_name}/*
     elif test ${move_files} == "1" ; then
       echo -e "\n  Moving collection ${coll_dir_name}...\n\n"
-      exiftool ${verb} -P ${PIC_INDEX} -fileOrder FileModifyDate -d ${PIC_INDEX}/%Y/%m/%d/${coll_dir_name}_%Y%m%d_%H%M%S%z '-FileName<$FileModifyDate_$ShutterCount.%e' ${PIC_COLL}/${coll_dir_name}/*
+      exiftool ${verb} -P ${PIC_INDEX} -fileOrder FileModifyDate -d ${PIC_INDEX}/%Y/%m/%d/${coll_dir_name}_%Y%m%d_%H%M%S%z '-FileName<${FileModifyDate}_${ShutterCount}.%e' ${PIC_COLL}/${coll_dir_name}/*
     else
       echo -e "What?  Should be an action selected somehow...  Exiting...\n\n"
       date

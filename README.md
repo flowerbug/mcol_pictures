@@ -1,4 +1,4 @@
-Sun 09 Feb 2020 03:35:41 PM EST
+Sun 26 Apr 2020 10:12:30 AM EDT
 
 
 # General Information
@@ -12,6 +12,8 @@ Sun 09 Feb 2020 03:35:41 PM EST
     - the default is to make a hard link in the the index to your collection so that the original file is left where it was first placed, you can also specify this by using the -l or --link options.
     - the -c or --copy options will make a copy while creating the new name in the index.
     - the -m or --move options moves the file from the collection to the index which means the original file in the collection is removed as the new file is created.  the contents of the moved file should not be changed in any significant manner by exiftool.
+
+  Both copy and link may report errors because files already exist, these are not really errors - look at the totals to see how many were actually copied or linked.
 
   The only options the script takes are [-h]|[--help], [-v]|[--verbose], [-V]|[--Version], [-c]|[--copy], [-l]|[--link] or [-m]|[--move]
 

@@ -165,7 +165,7 @@ done
 
 # print the version if asked and then exit
 if test "${version}" == "1" ; then
-  echo "$0 Version 1.0.3"
+  echo "$0 Version 1.0.4"
   exit
 fi
 

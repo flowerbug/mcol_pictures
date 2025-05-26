@@ -1,4 +1,4 @@
-Sun 26 Apr 2020 10:12:30 AM EDT
+Mon 26 May 2025 16:48:53 PM EDT
 
 
 # General Information
@@ -26,7 +26,7 @@ Sun 26 Apr 2020 10:12:30 AM EDT
 
   Some of the dependencies are: exiftool and find, there are perhaps others.
 
-  To run the script it needs to be in the $PATH as an executable.  It should run from anywhere.  The directories this script operates on are specified using ${HOME} and specificly the pics/collection and pics/index subdirectories.
+  To run the script it needs to be in the ${PATH} as an executable.  It should run from anywhere.  The directories this script operates on are specified using ${HOME} and specificly the pics/collection and pics/index subdirectories.
 
 
 # Bug Reporting
